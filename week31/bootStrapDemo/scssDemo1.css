@@ -1,7 +1,26 @@
+@charset "UTF-8";
+.rounded {
+  border-left-radius: 5px;
+}
+
+h1 {
+  background: #1875e7;
+}
+
 body {
-  color: #eee; }
+  margin: 7px;
+  top: 150px;
+  right: 10px;
+}
 
-p {
-  background: #0982c1; }
+.class1, .class2 {
+  border: 1px solid #ddd;
+}
 
-/*# sourceMappingURL=scssDemo1.css.map */
+.class2 {
+  font-size: 14px;
+}
+
+/*
+  这是/*注释
+*/

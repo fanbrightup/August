@@ -5,9 +5,21 @@ $side:left;
 }
 h1{
   background:rgb(24, 117, 231);
-
 }
-//  这是双斜线注释 
+$var :100px;
+body{
+  margin: (14px/2);
+  top:50px+100px;
+  right:$var * 0.1;
+}
+.class1{
+  border:1px solid #ddd;
+}
+.class2{
+  @extend .class1;
+  font-size:14px;
+}
+//  这是双斜线注释
 /*
   这是/*注释
 */
