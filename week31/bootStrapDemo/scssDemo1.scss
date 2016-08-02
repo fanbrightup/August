@@ -1,0 +1,13 @@
+$blue:rgb(24, 117, 231);
+$side:left;
+.rounded{
+  border-#{$side}-radius:5px;
+}
+h1{
+  background:rgb(24, 117, 231);
+
+} 
+//  这是双斜线注释
+/*
+  这是/*注释
+*/

@@ -1,0 +1,10 @@
+@charset "UTF-8";
+@import url(scssDemo1.css);
+h1 {
+  background: #0982c1; }
+
+/*
+  这是/*注释
+*/
+
+/*# sourceMappingURL=scssDemo2.css.map */
