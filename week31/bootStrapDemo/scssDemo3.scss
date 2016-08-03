@@ -1,0 +1,11 @@
+$color:blue;
+$color:orange !default;
+.block {
+  color: $color;
+}
+em {
+  $color: red !global;
+  a {
+    color:$color  ;
+  }
+}
