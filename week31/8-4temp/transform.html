@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .img1{
+      transform:rotate(7deg);
+      opacity:0.3;
+    }
+    .img2{
+      transform:rotateX(60deg);
+      float:left;
+    }
+    .img3{
+      transform:rotateY(60deg);
+    }
+    .img4{
+      transform:rotate3d(1,1,0,60deg);
+    }
+    .img5{
+      /*transform:skew(30deg,20deg);*/
+    }
+    @media print{
+    .img6{
+      transform:scale(1.5,1.5)translate(50px,50px);
+    }
+  }
+  </style>
+</head>
+<body>
+  <img class="img1" src="../../images/2.jpg" alt="待变化图片">
+  <img class="img2" src="../../images/2.jpg" alt="待变化图片">
+  <!-- <img class="img3" src="../../images/2.jpg" alt="待变化图片"> -->
+  <!-- <img class="img4" src="../../images/2.jpg" alt="待变化图片"> -->
+  <img class="img5" src="../../images/2.jpg" alt="待变化图片">
+  <img class="img6" src="../../images/2.jpg" alt="待变化图片">
+</body>
+</html>

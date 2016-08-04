@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .container{
+      width: 800px;
+      height: 800px;
+      background: url(../../images/3.jpg);
+      background-size: 200px 120px;
+      background-repeat: no-repeat;
+    }
+    .shadow1{
+      box-shadow:0 0 30px 10px;
+      height:100px;
+      width:100px;
+      border-radius:15px;
+      margin:30px;
+      float:left;
+    }
+    .shadow_inset{
+      border-radius:15px;
+      box-shadow:0 0 30px 10px inset;
+      height:100px;
+      width:100px;
+      margin:30px;
+      float:left;
+    }
+    h1{
+      font-size:40px;
+      color:black;
+      line-height:200px;
+      text-align:center;
+    }
+    .d1{
+      float:left;
+
+
+    }
+    .d2{
+      background: url(../../images/2.jpg);
+      background-size: 200px 200px;
+      background-repeat: no-repeat;
+    }
+    .d3{
+      float:left;
+    }
+    p.test{
+      background: url(../../images/1.jpg);
+      background-size: 200px 200px;
+      color:green;
+    }
+  </style>
+</head>
+<body>
+  <p  class = "test">这是<span class="test">p测</span>试</p>
+  <!-- <h1>这是h1</h1>
+  <div class ="d1">div1</div>
+  <div class ="d2">div2</div>
+  <div class ="d3">div3</div>
+  <div class="cantainer">
+    <div class="shadow1"></div>
+    <div class="shadow_inset"></div>
+
+  </div> -->
+  <div class="container"></div>
+</body>
+</html>

@@ -14,14 +14,12 @@
 
 			map.plugin(['AMap.Geolocation'], function(){
 				var geo = new AMap.Geolocation({
-					showButton: true
-				});
+					showButton:true});
 
 				geo.getCurrentPosition();
 
 				AMap.event.addListener(geo, 'complete', function(data){
 					console.log(data);
-					console.log("hehe");
 				});
 
 			});
