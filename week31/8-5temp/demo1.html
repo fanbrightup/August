@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src = "../../source/jquery.js"></script>
+</head>
+<body>
+  <h1 id="myH1">这是h1</h1>
+  <script>
+    // var myH1 = document.getElementById('myH1');
+    var myH1 = $('#myH1').get();
+    if(myH1.nodeType){
+      console.log("这是jsDOM节点");
+    }else if(myH1.jquery){
+      console.log("这是jquery节点");
+    }
+
+  </script>
+</body>h
+</html>
