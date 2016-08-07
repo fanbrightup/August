@@ -1,0 +1,14 @@
+{
+  "name": "say-hello-fan",
+  "version": "2.0.0",
+  "description": "一个简单的测试",
+  "bin":{
+	"fanfan":"./say.js"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "范",
+  "license": "ISC"
+}
