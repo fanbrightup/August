@@ -1,29 +1,41 @@
+//  实现了从tuicool网站首页,爬取连接字段等于四的所有链接及地址
+//  解决了困扰我两天的res.write()输出乱码问题
+//  解决了输出换行的问题<br>,对request有了一些认识
+//  request中的res没有res.write(),res.end()等功能,res中似乎也是网页元素内容,不过格式不如body整齐
+
 var express = require('express');
 var cheerio = require('cheerio');
-var superagent = require('superagent');
+var request = require('request');
 
 var app = express();
 app.get('/', function (req, res, next) {
-  // 用 superagent 去抓取 https://cnodejs.org/ 的内容
-  superagent.get('https://cnodejs.org/')
-    .end(function (err, sres) {
-      // 常规的错误处理
-      if (err) {
-        return next(err);
-      }
-      // sres.text 里面存储着网页的 html 内容，将它传给 cheerio.load 之后
-      // 就可以得到一个实现了 jquery 接口的变量，我们习惯性地将它命名为 `$`
-      // 剩下就都是 jquery 的内容了
-      var $ = cheerio.load(sres.text);
-      var items = [];
-      $('#topic_list .topic_title').each(function (idx, element) {
-        var $element = $(element);
-        items.push({
-          title: $element.attr('title'),
-          href: $element.attr('href')
-        });
-      });
- 
-      res.send(items);
-    });
-});
+
+
+request('http://www.tuicool.com/',function(err,response,body){
+      if(!err && response.statusCode == 200){
+        var items = [];
+          var $ = cheerio.load(body);
+          $('a').each(function (idx, element) {
+            var $element = $(element);
+            if($element.text().length == 4){
+            items.push({
+              text: $element.text(),
+              href: $element.attr('href')
+            });
+          }
+          });
+          //  加上这句就解决了乱码问题
+          res.write('<head><meta content="text/html"  charset="utf8"/></head>');
+          // for(var key in items){
+          //   //  在输出中使用'/n'不起效果,要使用<br>来输出,到文档流中,产生换行
+          //   res.write(items[key].text +'  '+items[key].href +"<br>");
+          // }
+          // res.end();
+          console.log(response);
+          res.end()
+
+
+        }
+  });
+})
+app.listen(3000);
